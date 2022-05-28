@@ -1,0 +1,2 @@
+class BookcommentsController < ApplicationController
+end
