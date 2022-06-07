@@ -2,7 +2,7 @@
 <table class="table table-hover table-inverse">
   <!--検索対象モデルがUserの時 -->
   <% if @range == "User" %>
-  <h2>User search for</h2>
+  <h2>User search for"<%= @word %>"</h2>
     <% @users.each do |user| %>
     <table class='table table-hover table-inverse'>
       <thead>
@@ -24,7 +24,7 @@
   <% else %>
     <!--検索対象モデルがUserではない時(= 検索対象モデルがBookの時) -->
     <tbody>
-        <h2>Book search for</h2>
+        <h2>Book search for"<%= @word %>"</h2>
       <% @books.each do |book| %>
         <table class='table table-hover table-inverse'>
       <thead>
