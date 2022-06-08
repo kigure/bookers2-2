@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   delete 'books/:id' => 'books#destroy', as: 'destroy_book'
   
   resources :books, only: [:index,:show,:edit,:create,:destroy,:update] do
-    resources :bookcomments, only: [:create, :destroy], as: 'book_comments'
+    resources :book_comments, only: [:create, :destroy]
     resource :favorites, only: [:create, :destroy]
   end
   
